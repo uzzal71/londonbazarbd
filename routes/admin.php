@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     dd('Welcome to admin user routes.');
 });
+
+Route::group(['middleware' => ['auth:admin']], function () {
+   Route::get('/dashboard', function () {
+        dd('Welcome to admin user routes.');
+    });
+});
