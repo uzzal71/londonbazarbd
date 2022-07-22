@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    dd('Welcome to admin user routes.');
-});
+Route::group(['middleware' => 'web'], function () {  
+    Route::middleware(['guest:admin','PreventBackHistory'])->group(function(){
+          Route::view('/','admin.login')->name('admin.login');
+          Route::post('/check',[AdminController::class,'check'])->name('admin.check');
+    });
 
-Route::group(['middleware' => ['auth:admin']], function () {
-   Route::get('/dashboard', function () {
-        dd('Welcome to admin user routes.');
+    Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
+        Route::view('/home','admin.home')->name('admin.home');
+        Route::post('/logout',[AdminController::class,'logout'])->name('admin.logout');
     });
 });
