@@ -64,7 +64,7 @@
                             </div>
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#CategoryMenuCollapsed" aria-expanded="false" aria-controls="CategoryMenuCollapsed">
-                                <div class="sb-nav-link-icon"><i class="fas fa-compass" aria-hidden="true"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-bookmark" aria-hidden="true"></i></div>
                                 Category
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -129,7 +129,6 @@
                                 </nav>
                             </div>
                             
-                            <div class="sb-sidenav-menu-heading">System Management</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Admin Management
