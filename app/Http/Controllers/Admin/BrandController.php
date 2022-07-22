@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class BrandController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('admin.orders.index');
+        return view('admin.brands.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.brands.create');
     }
 
     /**
@@ -57,7 +57,7 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.brands.edit');
     }
 
     /**

@@ -59,7 +59,7 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Store Management</a>
+                                    <a class="nav-link" href="{{ route('store.index') }}">Store Management</a>
                                 </nav>
                             </div>
 
@@ -70,8 +70,8 @@
                             </a>
                             <div class="collapse" id="CategoryMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add Category</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Category List</a>
+                                    <a class="nav-link" href="{{ route('categories.create') }}">Add Category</a>
+                                    <a class="nav-link" href="{{ route('categories.index') }}">Category List</a>
                                 </nav>
                             </div>
 
@@ -84,8 +84,9 @@
                             </a>
                             <div class="collapse" id="ProductMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add Product</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Product List</a>
+                                    <a class="nav-link" href="{{ route('products.create') }}">Add Product</a>
+                                    <a class="nav-link" href="{{ route('products.index') }}">Product List</a>
+                                    <a class="nav-link" href="{{ route('brands.index') }}">Brands</a>
                                 </nav>
                             </div>
 
@@ -98,8 +99,8 @@
                             </a>
                             <div class="collapse" id="StockMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add Stock</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Stock List</a>
+                                    <a class="nav-link" href="{{ route('stocks.create') }}">Add Stock</a>
+                                    <a class="nav-link" href="{{ route('stocks.index') }}">Stock List</a>
                                 </nav>
                             </div>
 
@@ -112,7 +113,7 @@
                             </a>
                             <div class="collapse" id="OrderMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-sidenav-light.html">Order List</a>
+                                    <a class="nav-link" href="{{ route('orders.index') }}">Order List</a>
                                 </nav>
                             </div>
 
@@ -123,8 +124,8 @@
                             </a>
                             <div class="collapse" id="CustomerMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Add Customer</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Customer List</a>
+                                    <a class="nav-link" href="{{ route('customers.create') }}">Add Customer</a>
+                                    <a class="nav-link" href="{{ route('customers.index') }}">Customer List</a>
                                 </nav>
                             </div>
                             

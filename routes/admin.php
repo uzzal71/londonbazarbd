@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\StoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,14 @@ Route::group(['middleware' => 'web'], function () {
     Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
         Route::view('/home','admin.home')->name('admin.home');
         Route::post('/logout',[AdminController::class,'logout'])->name('admin.logout');
+
+
+        Route::resource('store', 'Admin\StoreController');
+        Route::resource('categories', 'Admin\CategoryController');
+        Route::resource('products', 'Admin\ProductController');
+        Route::resource('brands', 'Admin\BrandController');
+        Route::resource('stocks', 'Admin\StockController');
+        Route::resource('orders', 'Admin\OrderController');
+        Route::resource('customers', 'Admin\CustomerController');
     });
 });
