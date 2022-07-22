@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Store;
 
 class StoreController extends Controller
 {
@@ -12,9 +13,16 @@ class StoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.store.index');
+        $sort_search = null;
+        $stores = Store::orderBy('id', 'desc');
+        if ($request->has('search')){
+            $sort_search = $request->search;
+            $stores = $stores->where('store_name', 'like', '%'.$sort_search.'%');
+        }
+        $stores = $stores->paginate(10);
+        return view('admin.store.index', compact('stores', 'sort_search'));
     }
 
     /**

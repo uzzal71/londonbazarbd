@@ -15,14 +15,29 @@
             </a>
         </li>
     </ol>
-    <div class="row">
-        <div class="card col-md-12">
+    <div class="">
+        <div class="card">
             <div class="card-header">
-            <i class="fas fa-table me-1"></i>
-                <strong>Customer Listing</strong>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="mt-2">
+                            <i class="fas fa-table me-1"></i>
+                            <strong>Customer Listing</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <form class="" id="sort_categories" action="" method="GET">
+                            <div class="box-inline pad-rgt pull-left">
+                                <div class="" style="min-width: 200px;">
+                                    <input type="text" class="form-control" id="search" name="search"@isset($sort_search) value="{{ $sort_search }}" @endisset placeholder="Type name & Enter">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-            <table class="table table-bordered" id="datatablesSimple">
+            <div class="card-body overflow-auto">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Sl#</th>
@@ -33,7 +48,31 @@
                         <th>Action</th>
                     </tr>
                 </thead>
+                <tbody>
+                    @foreach($customers as $key=>$customer)
+                    <tr>
+                        <td>{{ $key + 1 }}</td>
+                        <td>{{ $customer->name }}</td>
+                        <td>{{ $customer->mobile }}</td>
+                        <td>{{ $customer->email }}</td>
+                        <td>{{ $customer->logo }}</td>
+                        <td>
+                            <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-sm btn-outline-success">
+                                <i class="fas fa-edit me-1"></i>
+                            </a>
+                            <a href="{{ route('customers.destroy', $customer->id) }}" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-trash me-1"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
+            {{-- Pagination --}}
+            <div class="d-flex justify-content-center">
+                {{ $customers->appends(request()->input())->links() }}
+            </div>
+            {{-- Pagination --}}
             </div>
         </div>
     </div>

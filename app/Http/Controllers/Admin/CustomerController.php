@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class CustomerController extends Controller
 {
@@ -12,9 +13,16 @@ class CustomerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.customers.index');
+        $sort_search = null;
+        $customers = User::orderBy('id', 'desc');
+        if ($request->has('search')){
+            $sort_search = $request->search;
+            $customers = $customers->where('name', 'like', '%'.$sort_search.'%');
+        }
+        $customers = $customers->paginate(10);
+        return view('admin.customers.index', compact('customers', 'sort_search'));
     }
 
     /**
