@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Brand;
 
 class BrandController extends Controller
 {
@@ -14,7 +15,14 @@ class BrandController extends Controller
      */
     public function index()
     {
-        return view('admin.brands.index');
+        $sort_search = null;
+        $brands = Brand::orderBy('id', 'desc');
+        if ($request->has('search')){
+            $sort_search = $request->search;
+            $brands = $brands->where('name', 'like', '%'.$sort_search.'%');
+        }
+        $brands = $brands->paginate(10);
+        return view('admin.brands.index', compact('brands', 'sort_search'));
     }
 
     /**
