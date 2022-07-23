@@ -13,10 +13,10 @@ class BrandController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $sort_search = null;
-        $brands = Brand::orderBy('id', 'desc');
+        $brands = Brand::with('category')->orderBy('id', 'desc');
         if ($request->has('search')){
             $sort_search = $request->search;
             $brands = $brands->where('name', 'like', '%'.$sort_search.'%');

@@ -14,6 +14,11 @@
             .light-primary {
                 background-color: #fdf1f1ad !important;
             }
+            .text-bold { font-weight: bolder; }
+
+            label {
+                font-weight: bolder;
+            }
         </style>
     </head>
     <body class="sb-nav-fixed">
@@ -148,11 +153,11 @@
                                 </nav>
                             </div>
                             
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="{{ route('admin.listing') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                                 Admin Management
                             </a>
-                            <a class="nav-link" href="tables.html">
+                            <a class="nav-link" href="{{ route('app.system') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-database"></i></div>
                                 System Infomation
                             </a>

@@ -41,10 +41,10 @@
                 <thead>
                     <tr>
                         <th>Sl#</th>
-                        <th>Customer Name</th>
+                        <th>Picture</th>
+                        <th>Name</th>
                         <th>Mobile</th>
                         <th>Email</th>
-                        <th>avatar</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -52,10 +52,14 @@
                     @foreach($customers as $key=>$customer)
                     <tr>
                         <td>{{ $key + 1 }}</td>
+                        <td>
+                        <img 
+                            src="{{ asset('uploads/default-image.png') }}"
+                            alt="{{ $customer->name }}" />
+                        </td>
                         <td>{{ $customer->name }}</td>
                         <td>{{ $customer->mobile }}</td>
                         <td>{{ $customer->email }}</td>
-                        <td>{{ $customer->logo }}</td>
                         <td>
                             <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-sm btn-outline-success">
                                 <i class="fas fa-edit me-1"></i>

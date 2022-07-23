@@ -24,6 +24,8 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::middleware(['auth:admin','PreventBackHistory'])->group(function(){
         Route::view('/home','admin.home')->name('admin.home');
+        Route::get('/administrator', 'Admin\AdminController@index')->name('admin.listing');
+        Route::get('/system/information', 'Admin\SystemController@index')->name('app.system');
         Route::post('/logout',[AdminController::class,'logout'])->name('admin.logout');
 
 

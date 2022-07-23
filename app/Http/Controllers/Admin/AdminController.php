@@ -28,6 +28,18 @@ class AdminController extends Controller
          }
     }
 
+    public function index(Request $request) 
+    {
+        $sort_search = null;
+        $admins = Admin::orderBy('id', 'desc');
+        if ($request->has('search')){
+            $sort_search = $request->search;
+            $admins = $admins->where('name', 'like', '%'.$sort_search.'%');
+        }
+        $admins = $admins->paginate(10);
+        return view('admin.index', compact('admins', 'sort_search'));
+    }
+
     function logout(){
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login');

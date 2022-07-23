@@ -5,7 +5,7 @@
     <h5 class="mt-4">Brand Management</h5>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">
-            <a href="{{ route('brands.index') }}"><i class="fab fa-delicious" aria-hidden="true"></i> Brand</a>
+            <a href="{{ route('store.index') }}"><i class="fab fa-brand"></i> Brand</a>
         </li>
         <li class="breadcrumb-item active">
             <a href="{{ route('admin.home') }}"><i class="fas fa-home me-1"></i> Home</a>
@@ -37,24 +37,30 @@
                 <thead>
                     <tr>
                         <th>Sl#</th>
-                        <th>Brand name</th>
-                        <th>Category name</th>
-                        <th>status</th>
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($brands as $key => $brand)
+                    @foreach($admins as $key => $row)
                     <tr>
                         <td>{{ $key + 1 }}</td>
-                        <td>{{ $brand->name }}</td>
-                        <td>{{ $brand->category->name }}</td>
-                        <td><?= $brand->status == 1 ? '<span class="text-success text-bold">Active</span>' : '<span class="text-danger text-bold ">Inactive</span>'; ?></td>
                         <td>
-                            <a href="{{ route('brands.edit', $brand->id) }}" class="btn btn-sm btn-outline-success">
+                        <img 
+                            src="{{ asset('uploads/default-image.png') }}"
+                            alt="{{ $row->name }}" />
+                        </td>
+                        <td>{{ $row->name }}</td>
+                        <td>{{ $row->mobile }}</td>
+                        <td>{{ $row->email }}</td>
+                        <td>
+                            <a href="" class="btn btn-sm btn-outline-success">
                                 <i class="fas fa-edit me-1"></i>
                             </a>
-                            <a href="{{ route('brands.destroy', $brand->id) }}" class="btn btn-sm btn-outline-danger">
+                            <a href="" class="btn btn-sm btn-outline-danger">
                                 <i class="fas fa-trash me-1"></i>
                             </a>
                         </td>
@@ -64,7 +70,7 @@
             </table>
             {{-- Pagination --}}
             <div class="d-flex justify-content-center">
-                {{ $brands->appends(request()->input())->links() }}
+                {{ $admins->appends(request()->input())->links() }}
             </div>
             {{-- Pagination --}}
             </div>
