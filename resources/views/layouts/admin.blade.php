@@ -10,6 +10,11 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+            .light-primary {
+                background-color: #fdf1f1ad !important;
+            }
+        </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
@@ -75,6 +80,20 @@
                                 </nav>
                             </div>
 
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#BrandMenuCollapsed" aria-expanded="false" aria-controls="BrandMenuCollapsed">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fab fa-delicious" aria-hidden="true"></i>
+                                </div>
+                                Brand
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="BrandMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ route('brands.create') }}">Add Brand</a>
+                                    <a class="nav-link" href="{{ route('brands.index') }}">Brand List</a>
+                                </nav>
+                            </div>
+
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#ProductMenuCollapsed" aria-expanded="false" aria-controls="ProductMenuCollapsed">
                                 <div class="sb-nav-link-icon">
                                     <i class="fa fa-file" aria-hidden="true"></i>
@@ -86,7 +105,6 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ route('products.create') }}">Add Product</a>
                                     <a class="nav-link" href="{{ route('products.index') }}">Product List</a>
-                                    <a class="nav-link" href="{{ route('brands.index') }}">Brands</a>
                                 </nav>
                             </div>
 
@@ -108,7 +126,8 @@
                                 <div class="sb-nav-link-icon">
                                     <i class="fa fa-list-ul" aria-hidden="true"></i>
                                 </div>
-                                Orders
+                                Orders 
+                                <span class="badge badge-pill badge-warning" style="background-color: #f60400; margin-left: 20px;">254</span>
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="OrderMenuCollapsed" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">

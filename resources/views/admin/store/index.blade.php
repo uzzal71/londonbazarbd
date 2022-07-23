@@ -13,7 +13,7 @@
     </ol>
     <div class="row">
         <div class="card col-md-12">
-            <div class="card-header">
+            <div class="card-header light-primary">
             <i class="fas fa-table me-1"></i>
                 <strong>Store Listing</strong>
             </div>
