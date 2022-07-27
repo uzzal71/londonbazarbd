@@ -1,59 +1,36 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-black text-muted" style="background-color: #333e4f">
   <!-- Section: Social media -->
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-  >
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
+  <section class="d-flex justify-content-center justify-content-lg-between border-bottom"></section>
   <!-- Section: Social media -->
 
   <!-- Section: Links  -->
   <section class="">
-    <div class="container text-center text-md-start mt-5">
+    <div class="container-fluid text-left text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Need Help?
+          <h6 class="fw-bold mb-4" style="color: yellow;">
+            Need Help ?
           </h6>
-          <p>Call us 01727-111 000</p>
-          <p>Email us info@londonbazarbd.com</p>
-          <p>Office Address 165, Suuvra Sagar Building, Ground Floor, New Elephant Road, Hatirpool, Dhaka-1205</p>
+          <div style="line-height: 10px">
+            <p>Call us 01727-111 000</p>
+            <p>Email us info@londonbazarbd.com</p>
+            <p>Office Address 165, Suuvra Sagar Building, Ground Floor</p>
+          </div>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="fw-bold mb-4" style="color: yellow;">
             Related Page
           </h6>
-          <p>
+          <div style="line-height: 10px;">
+            <p>
             <a href="#!" class="text-reset">Returns & Refunds Policy</a>
           </p>
           <p>
@@ -62,24 +39,29 @@
           <p>
             <a href="#!" class="text-reset">Privacy Policy</a>
           </p>
+          </div>
         </div>
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
           <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="fw-bold mb-4" style="color: yellow;">
             Get in Touch
           </h6>
-          <p>
-            <a href="#!" class="text-reset">Facebook</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Twitter</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Linked</a>
-          </p>
+          <!-- Right -->
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <!-- Right -->
         </div>
         <!-- Grid column -->
       </div>
@@ -90,7 +72,7 @@
 
   <!-- Section -->
   <section class="">
-    <div class="container text-center text-md-start mt-5">
+    <div class="container-fluid text-left text-md-start mt-5">
       <img src="{{ asset('uploads/payment-gateway-webhub.png') }}" alt="Payment Method" width="100%">
     </div>
   </section>
