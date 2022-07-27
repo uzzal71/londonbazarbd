@@ -30,6 +30,8 @@
             @yield('content')
         </main>
 
+        @include('latest_product')
+
         @include('footer')
     </div>
 </body>
