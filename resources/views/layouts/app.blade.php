@@ -51,23 +51,8 @@
     <script src="{{ asset('splidejs/js/splide-extension-auto-scroll.min.js') }}"></script>
     <script>
       document.addEventListener( 'DOMContentLoaded', function() {
+
         
-        new Splide( '.hero-slider' , {
-          type   : 'loop',
-          perPage: 1,
-          perMove: 1,
-          speed: 400,
-          gap    : '1rem',
-          autoplay: true,
-          interval: 2500,
-          pagination: true,
-          arrows: false,
-          pauseOnHover: true,
-          rewind: true,
-          lazyLoad: 'nearby'
-        }).mount();
-
-
           let timeOutInterval = 2000;
           for (let index = 1; index < 4;) {
             const hasOffer = document.querySelector(`.offer${index}`);
@@ -80,7 +65,6 @@
                 gap: '15px',
                 autoplay: true,
                 interval: timeOutInterval,
-                pagination: false,
                 pagination: false,
                 pauseOnHover: true,
                 rewind: true,
@@ -99,6 +83,21 @@
 
             index++;
           }
+        
+         new Splide( '.hero-slider' , {
+          type   : 'loop',
+          perPage: 1,
+          perMove: 1,
+          speed: 400,
+          gap    : '1rem',
+          autoplay: true,
+          interval: 2500,
+          pagination: true,
+          arrows: false,
+          pauseOnHover: true,
+          rewind: true,
+          lazyLoad: 'nearby'
+        }).mount();
 
       });
     </script>

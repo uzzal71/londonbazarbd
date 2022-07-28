@@ -147,6 +147,7 @@
   width: 100%;
 }
 
+
 .hero-slider .splide__pagination {
     bottom: 30%;
 }
