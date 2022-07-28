@@ -11,10 +11,11 @@
     </div>
     <div class="container-fluid mt-2">
         <div class="row">
-            <?php for ($i=0; $i < 48; $i++) { ?>
+            <?php for ($i=0; $i < 32; $i++) { ?>
             <div class="col-md-5ths col-xs-6 mb-4">
                 <div class="card">
-                  <img class="card-img-top" src="{{ asset('uploads/products/reading-glass-510x510.webp') }}" alt="Card image cap">
+                  <img class="primary-image" src="{{ asset('uploads/products/reading-glass-510x510.webp') }}" alt="Primary Image">
+                  <img class="secondary-img" src="{{ asset('uploads/products/saati-3198-min.webp') }}" alt="Secondary Image" width="100%">
                   <div class="card-body">
                     <h5 class="card-title">Focus Adjustable Dial Vision Reading Glasses Variable Lens</h5>
                     <p class="card-text" style="font-weight: bold; font-size: 16px;">TK. 1200 

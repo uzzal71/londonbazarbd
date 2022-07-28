@@ -111,6 +111,11 @@
     padding-left: 15px;
 }
 
+.card:hover {
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
 .col-xs-5ths {
     width: 20%;
     float: left;
@@ -133,4 +138,42 @@
         float: left;
     }
 }
+
+.full-width-slider .splide__list div .img-wrap, .hero-slider .splide__list div .img-wrap {
+    padding-bottom: 24% !important;
+}
+
+.splide__slide img {
+  width: 100%;
+}
+
+.hero-slider .splide__pagination {
+    bottom: 30%;
+}
+
+.hero-slider .splide__pagination__page {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    opacity: 1;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+
+.hero-slider .splide__pagination__page.is-active {
+    border: 1px solid var(--primary-color);
+    background: yellow;
+}
+
+.card .secondary-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.card:hover .secondary-img{
+      display: inline;
+  }
 </style>
