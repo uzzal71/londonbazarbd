@@ -54,7 +54,7 @@
 
         
           let timeOutInterval = 2000;
-          for (let index = 1; index < 4;) {
+          for (let index = 1; index < 3;) {
             const hasOffer = document.querySelector(`.offer${index}`);
             if(hasOffer) {
               new Splide( `.offer${index}` , {
@@ -101,5 +101,7 @@
 
       });
     </script>
+
+    @yield('scripts')
 </body>
 </html>

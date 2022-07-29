@@ -1,18 +1,15 @@
 <section class="mb-2">
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-md-6">
-                <h3>হট ডিল !!</h3>
-            </div>
-            <div class="col-md-6">
-                <a href="#!" class="btn btn-warning" style="float: right;">Show All</a>
+            <div class="col-md-12">
+                <h3 class="text-center text-bold">RELATED PRODUCTS</h3>
             </div>
         </div>
     </div>
 </section>
 
-<div class="container-fluid">
-    <section id="image-carousel" class="offer1" aria-label="Beautiful Images">
+<div class="container-fluid mb-5">
+    <section id="image-carousel" class="similar-products" aria-label="Beautiful Images">
       <div class="splide__track">
             <ul class="splide__list">
                 <?php for ($i=0; $i < 10; $i++) { ?>

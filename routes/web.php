@@ -24,6 +24,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/products/{name}', [ProductController::class, 'get_product'])->name('get.product');
+
 Route::get('/returns-and-refunds-policy', [OthersController::class, 'return_policy'])->name('returns.policy');
 Route::get('/terms-and-condition', [OthersController::class, 'terms_condition'])->name('terms.condition');
 Route::get('/privacy-policy', [OthersController::class, 'privacy_policy'])->name('privacy.policy');
