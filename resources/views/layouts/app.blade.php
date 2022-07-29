@@ -15,6 +15,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('splidejs/css/splide.min.css') }}">
+    <script src="{{ asset('splidejs/js/splide.min.js') }}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -32,14 +35,10 @@
             @include('level_two_deal')
 
             @include('level_three_deal')
-        @endif
 
-        @if (Request::path() != '/')
-            @yield('content')
-        @endif
-
-        @if (Request::path() == '/')
             @include('latest_product')
+        @else
+            @yield('content')
         @endif
 
         @include('footer')
@@ -47,60 +46,137 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('splidejs/js/splide.min.js') }}"></script>
-    <script src="{{ asset('splidejs/js/splide-extension-auto-scroll.min.js') }}"></script>
-    <script>
-      document.addEventListener( 'DOMContentLoaded', function() {
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/zoom-image.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    
+<script>
+     new Splide( '.hero-slider' , {
+      type   : 'loop',
+      perPage: 1,
+      perMove: 1,
+      speed: 400,
+      gap    : '1rem',
+      autoplay: true,
+      interval: 2500,
+      arrow: true,
+      pagination: true,
+      arrows: false,
+      pauseOnHover: true,
+      rewind: true,
+      lazyLoad: 'nearby'
+    }).mount();
+</script>
 
-        
-          let timeOutInterval = 2000;
-          for (let index = 1; index < 3;) {
-            const hasOffer = document.querySelector(`.offer${index}`);
-            if(hasOffer) {
-              new Splide( `.offer${index}` , {
-                type   : 'loop',
-                perPage: 5,
-                perMove: 1,
-                speed: 400,
-                gap: '15px',
-                autoplay: true,
-                interval: timeOutInterval,
-                pagination: false,
-                pauseOnHover: true,
-                rewind: true,
-                lazyLoad: 'nearby',
-                breakpoints: {
-                '1024': {
-                  perPage: 3,
-                },
-                '768': {
-                  perPage: 2,
-                },
-              }
-              }).mount(); 
-              timeOutInterval += 500;
-            }
 
-            index++;
-          }
-        
-         new Splide( '.hero-slider' , {
-          type   : 'loop',
-          perPage: 1,
-          perMove: 1,
-          speed: 400,
-          gap    : '1rem',
-          autoplay: true,
-          interval: 2500,
-          pagination: true,
-          arrows: false,
-          pauseOnHover: true,
-          rewind: true,
-          lazyLoad: 'nearby'
-        }).mount();
+<script type="text/javascript">
+new Splide('.offer1' , {
+  type   : 'loop',
+  perPage: 5,
+  perMove: 1,
+  speed: 400,
+  gap: '15px',
+  autoplay: true,
+  interval: 2000,
+  arrow: true,
+  pagination: false,
+  pauseOnHover: true,
+  rewind: true,
+  lazyLoad: 'nearby',
+  breakpoints: {
+  '1024': {
+    perPage: 3,
+    arrow: true,
+  },
+  '768': {
+    perPage: 2,
+    arrow: true,
+  },
+}
+}).mount();
+</script>
 
-      });
-    </script>
+
+<script type="text/javascript">
+new Splide('.offer2' , {
+  type   : 'loop',
+  perPage: 5,
+  perMove: 1,
+  speed: 400,
+  gap: '15px',
+  autoplay: true,
+  interval: 2000,
+  arrow: true,
+  pagination: false,
+  pauseOnHover: true,
+  rewind: true,
+  lazyLoad: 'nearby',
+  breakpoints: {
+  '1024': {
+    perPage: 3,
+  },
+  '768': {
+    perPage: 2,
+  },
+}
+}).mount();
+</script>
+
+
+<script type="text/javascript">
+new Splide('.offer3' , {
+  type   : 'loop',
+  perPage: 5,
+  perMove: 1,
+  speed: 400,
+  gap: '15px',
+  autoplay: true,
+  interval: 2000,
+  arrow: true,
+  pagination: false,
+  pauseOnHover: true,
+  rewind: true,
+  lazyLoad: 'nearby',
+  breakpoints: {
+  '1024': {
+    perPage: 3,
+    arrow: true,
+  },
+  '768': {
+    perPage: 2,
+    arrow: true,
+  },
+}
+}).mount();
+</script>
+
+
+<script type="text/javascript">
+new Splide('.offer4' , {
+  type   : 'loop',
+  perPage: 5,
+  perMove: 1,
+  speed: 400,
+  gap: '15px',
+  autoplay: true,
+  interval: 2000,
+  arrow: true,
+  pagination: false,
+  pauseOnHover: true,
+  rewind: true,
+  lazyLoad: 'nearby',
+  breakpoints: {
+  '1024': {
+    perPage: 3,
+    arrow: true,
+  },
+  '768': {
+    perPage: 2,
+    arrow: true,
+  },
+}
+}).mount();
+</script>
 
     @yield('scripts')
 </body>

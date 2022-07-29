@@ -12,11 +12,11 @@
 </section>
 
 <div class="container-fluid">
-    <section id="image-carousel" class="offer3" aria-label="Beautiful Images">
+    <section id="image-carousel-level-three" class="offer3" aria-label="Beautiful Images">
       <div class="splide__track">
             <ul class="splide__list">
                 <?php for ($i=0; $i < 10; $i++) { ?>
-                <li class="splide__slide">
+                <div class="splide__slide">
                     <div class="card">
                       <img class="primary-image" src="{{ asset('uploads/products/reading-glass-510x510.webp') }}" alt="Primary Image">
                         <img class="secondary-img" src="{{ asset('uploads/products/saati-3198-min.webp') }}" alt="Secondary Image">
@@ -27,7 +27,7 @@
                         <a href="#" class="btn btn-success d-block">অর্ডার করুন</a>
                       </div>
                     </div>
-                </li>
+                </div>
                 <?php } ?>
             </ul>
       </div>

@@ -9,7 +9,15 @@
 </section>
 
 <div class="container-fluid mb-5">
-    <section id="image-carousel" class="similar-products" aria-label="Beautiful Images">
+    <section id="image-carousel-offer4" class="offer4" aria-label="Custom Arrows Example">
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev">
+            Prev
+        </button>
+        <button class="splide__arrow splide__arrow--next">
+            Next
+        </button>
+  </div>
       <div class="splide__track">
             <ul class="splide__list">
                 <?php for ($i=0; $i < 10; $i++) { ?>

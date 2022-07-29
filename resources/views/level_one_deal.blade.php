@@ -12,9 +12,9 @@
 </section>
 
 <div class="container-fluid">
-    <section id="image-carousel" class="offer1" aria-label="Beautiful Images">
+    <section id="image-carousel-level-one" class="offer1" aria-label="Beautiful Images">
       <div class="splide__track">
-            <ul class="splide__list">
+            <div class="splide__list">
                 <?php for ($i=0; $i < 10; $i++) { ?>
                 <div class="splide__slide">
                     <div class="card">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <?php } ?>
-            </ul>
+            </div>
       </div>
     </section>
 </div>
