@@ -31,13 +31,13 @@
           </h6>
           <div style="line-height: 10px; color: #fff;">
             <p>
-            <a href="#!" class="text-reset">Returns & Refunds Policy</a>
+            <a href="{{ route('returns.policy') }}" class="text-reset">Returns & Refunds Policy</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Terms & Condition</a>
+            <a href="{{ route('terms.condition') }}" class="text-reset">Terms & Condition</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Privacy Policy</a>
+            <a href="{{ route('privacy.policy') }}" class="text-reset">Privacy Policy</a>
           </p>
           </div>
         </div>
